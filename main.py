@@ -6,6 +6,7 @@ import ball
 import brick
 import paddle
 from constants import *
+import pygame._view
 
 ### Main file for running the game
 
@@ -35,10 +36,10 @@ background = background.convert()
 background.fill((250, 250, 250))
 
 # import images
-paddle_img = pygame.image.load("paddle.png").convert()
-ball_img = pygame.image.load("ball.png").convert()
+paddle_img = pygame.image.load("assets/paddle.png").convert()
+ball_img = pygame.image.load("assets/ball.png").convert()
 ball_img.set_colorkey((255, 0, 0))
-brick_img = pygame.image.load("brick.png").convert()
+brick_img = pygame.image.load("assets/brick.png").convert()
 
 # create objects
 paddle = paddle.Paddle(paddle_img, 8)

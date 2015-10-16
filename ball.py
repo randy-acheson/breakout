@@ -50,9 +50,8 @@ class Ball():
                 self.fastspeed = True
 
         ###
-        ### CHANGE to reset ball and decrement life counter
+        ### TODO: reset ball and decrement life counter
         ###
-                
         # if hit bottom, change x direction
         if self.rect.bottom > screen_rect.bottom:
 

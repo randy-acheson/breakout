@@ -10,6 +10,7 @@ class Paddle():
         self.rect = image.get_rect().move(
             screen_rect.centerx, screen_rect.height - PADDLE_HEIGHT)
 
+    # paddle is moved in the given direction
     def move(self, direction, background):
         if self.rect.left < screen_rect.left:
             self.rect.left = screen_rect.left
