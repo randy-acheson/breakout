@@ -1,5 +1,6 @@
 from constants import *
 
+### Class for the ball that is used to break the bricks
 class Ball():
 
     def __init__(self, image, speed):
@@ -13,6 +14,7 @@ class Ball():
     def move(self, paddle, brickDict, background):
         # if hit paddle, change direction based on where on paddle hit
         if self.rect.colliderect(paddle.rect):
+
             if self.rect.centerx < paddle.rect.left:
                 self.rect.right = paddle.rect.left
                 self.x_dir *= -1
@@ -31,6 +33,7 @@ class Ball():
 
         # if hit sides of screen, change x direction
         if self.rect.left < screen_rect.left:
+
             self.x_dir *= -1
             self.rect.left = screen_rect.left
         if self.rect.right > screen_rect.right:
@@ -39,6 +42,7 @@ class Ball():
 
         # if hit top of screen, change y direction and increase speed
         if self.rect.top < screen_rect.top:
+
             self.rect.top = screen_rect.top
             self.y_dir *= -1
             if not self.fastspeed:
@@ -51,12 +55,14 @@ class Ball():
                 
         # if hit bottom, change x direction
         if self.rect.bottom > screen_rect.bottom:
+
             self.rect.bottom = screen_rect.bottom
             self.y_dir *= -1
             
         # if hit brick, remove brick and reverse x direction
         brick = False
         for i in brickDict.keys():
+
             if self.rect.colliderect(brickDict[i].rect):
                 brick = brickDict[i]
                 bricknum = i
@@ -69,6 +75,7 @@ class Ball():
         
         # if brick collision, remove brick from dictionary
         if brick:
+
             screen.blit(background, brick.rect, brick.rect)
             brickDict.pop(bricknum)
         
@@ -81,6 +88,7 @@ class Ball():
 
         if brick:
             if self.rect.colliderect(brick.rect):
+
                 print self.rect.x
                 if dx > 0:
                     self.rect.right = brick.rect.left

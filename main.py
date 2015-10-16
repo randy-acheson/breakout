@@ -7,10 +7,13 @@ import brick
 import paddle
 from constants import *
 
+### Main file for running the game
+
 my_dir = os.path.dirname('__file__')
 
 brickDict = {}
 
+# creates the rows of bricks recursively
 def createBrick(row, width, i):
     if row < 5*BRICK_HEIGHT:
         brickDict["Brick" + str(i)] = brick.Brick(brick_img,

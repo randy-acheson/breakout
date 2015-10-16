@@ -1,5 +1,7 @@
 from constants import *
 
+### Class for the controllable paddle object
+### Moves according to the left and right arrow keys
 class Paddle():
 
     def __init__(self, image, speed):

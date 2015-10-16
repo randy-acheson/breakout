@@ -1,0 +1,1 @@
+This is a version of the game Breakout. It is written in Python and uses the PyGame module. 
