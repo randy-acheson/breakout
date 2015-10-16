@@ -36,10 +36,10 @@ background = background.convert()
 background.fill((250, 250, 250))
 
 # import images
-paddle_img = pygame.image.load("assets/paddle.png").convert()
-ball_img = pygame.image.load("assets/ball.png").convert()
+paddle_img = pygame.image.load("images/paddle.png").convert()
+ball_img = pygame.image.load("images/ball.png").convert()
 ball_img.set_colorkey((255, 0, 0))
-brick_img = pygame.image.load("assets/brick.png").convert()
+brick_img = pygame.image.load("images/brick.png").convert()
 
 # create objects
 paddle = paddle.Paddle(paddle_img, 8)
